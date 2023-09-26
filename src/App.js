@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import LoginPage from "./pages/LoginPage";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.bundle.js";
+import UrlInputPage from "./pages/UrlInputPage";
+import YoutubeLecturePage from "./pages/Lecture/YoutubeLecturePage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/url-input" element={<UrlInputPage />} />
+        <Route path="/lectures/youtube" element={<YoutubeLecturePage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
