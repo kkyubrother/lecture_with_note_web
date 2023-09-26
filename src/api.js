@@ -1,5 +1,5 @@
-// const HOST = "/api";
-const HOST = "http://localhost:8000/api";
+const HOST = "/api";
+// const HOST = "http://localhost:8000/api";
 const INIT = {
   credentials: "include",
   headers: {
