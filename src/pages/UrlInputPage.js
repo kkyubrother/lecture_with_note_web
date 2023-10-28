@@ -1,6 +1,7 @@
 import LoginImg from "../static/img/login.png";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { BsGithub } from "react-icons/bs";
 import { url_navigate } from "../utils/lecture";
 import LectureList from "../components/LectureList";
 
@@ -63,7 +64,14 @@ const UrlInputPage = () => {
               style={{ width: "480px", backgroundColor: "white" }}
             />
           </div>
-          <p className="mt-5 mb-3 text-muted">&copy; 2023</p>
+          <p className="mt-5 mb-3 text-muted">
+            &copy; 2023
+            {"  "}
+            <a href={"https://github.com/kkyubrother/lecture_with_note_web"}>
+              Github
+              <BsGithub />
+            </a>
+          </p>
         </form>
       </div>
     </div>

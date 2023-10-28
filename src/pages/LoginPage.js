@@ -2,6 +2,7 @@ import "./LoginPage.css";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { fetchLogout, isLogin } from "../api";
+import { BsGithub } from "react-icons/bs";
 
 import GoogleLogin from "../components/GoogleAuth";
 
@@ -48,7 +49,14 @@ const LoginPage = () => {
           <div>
             <GoogleLogin onSuccess={handleOnLoginSuccess} />
           </div>
-          <p className="mt-5 mb-3 text-muted">&copy; 2022</p>
+          <p className="mt-5 mb-3 text-muted">
+            &copy; 2023
+            {"  "}
+            <a href={"https://github.com/kkyubrother/lecture_with_note_web"}>
+              Github
+              <BsGithub />
+            </a>
+          </p>
         </form>
       </div>
     </div>
